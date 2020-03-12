@@ -2,7 +2,16 @@
  
  This project will be based around using both python and SQL
  
- Definition of Done:
- - git
- - github
- - 
+ Agenda:
+ - pyodbc
+ - Connect to Database
+ - Abstract connection
+ - Make data persistent
+ - Mirror classes in DB
+ - CRUD
+    - Create
+    - Read
+    - Update
+    - Delete
+ 
+ 
