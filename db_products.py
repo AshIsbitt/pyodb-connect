@@ -26,5 +26,9 @@ class NWProducts(MSDBconn):
     def delete_record(self, delete):
         row = self.__sql_query("DELETE FROM {} WHERE ProductName = '{}'".format(self.table, delete))
         self.conn.commit()
-        return str(row) + " remove"
+        return "Removed"
 
+    def delete_record_id(self, delete):
+        row = self.__sql_query("DELETE FROM {} WHERE ProductID = {}".format(self.table, delete))
+        self.conn.commit()
+        return "Removed"

@@ -7,6 +7,7 @@ while True:
     print("Select 2 for one product")
     print("Select 3 to insert product")
     print("Select 4 to delete product")
+    print("Select 5 to delete via ID")
 
     user_input = input(">>> ")
 
@@ -34,3 +35,7 @@ while True:
     elif user_input == "4":
         delete = input("What row do you want to delete? ")
         print(products_tb.delete_record(delete))
+
+    elif user_input == "5":
+        delete = input("What row do you want to delete? ")
+        print(products_tb.delete_record_id(delete))
