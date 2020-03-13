@@ -19,12 +19,12 @@ class NWProducts(MSDBconn):
         return rows
 
     def create_record(self, product_name):
-        row = self.__sql_query("INSERT INTO {} VALUES '{}'".format(self.table, product_name))
-        MSDBconn.conn.commit()
+        row = self.__sql_query("INSERT INTO {}(ProductName) VALUES ('{}')".format(self.table, product_name))
+        self.conn.commit()
         return row
 
     def delete_record(self, delete):
-        row = self.__sql_query("DELETE FROM {} WHERE ProductID = {}".format(self.table, delete))
-        MSDBconn.conn.commit()
-        return row + " remove"
+        row = self.__sql_query("DELETE FROM {} WHERE ProductName = '{}'".format(self.table, delete))
+        self.conn.commit()
+        return str(row) + " remove"
 

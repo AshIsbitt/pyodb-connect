@@ -32,5 +32,5 @@ while True:
         print(products_tb.create_record(product_name))
 
     elif user_input == "4":
-        delete = input("What row ID do you want to delete? ")
+        delete = input("What row do you want to delete? ")
         print(products_tb.delete_record(delete))
